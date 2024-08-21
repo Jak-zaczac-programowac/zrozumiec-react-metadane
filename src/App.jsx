@@ -2,17 +2,17 @@ import { useState } from "react";
 
 const movies = [
     {
-        title: "The Godfather",
+        title: "Ojciec Chrzestny",
         year: "1972",
         author: "Francis Ford Coppola",
     },
     {
-        title: "The Shawshank Redemption",
+        title: "Skazani na Shawshank",
         year: "1994",
         author: "Frank Darabont",
     },
     {
-        title: "The Dark Knight",
+        title: "Mroczny rycerz",
         year: "2008",
         author: "Christopher Nolan",
     },
@@ -23,6 +23,13 @@ function App() {
 
     return (
         <>
+            <meta name="description" content="Lista popularnych filmów" />
+            <meta
+                name="keywords"
+                content={`film, kino, lista filmów ${
+                    currentMovie ? ", " + currentMovie.author : ""
+                }`}
+            />
             <ul>
                 {movies.map((movie) => (
                     <li
